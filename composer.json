@@ -1,0 +1,12 @@
+{
+    "name": "processid/config",
+    "description": "Configuration manager",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "processid\\config\\": "/"
+        }
+    }
+}
