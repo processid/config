@@ -17,6 +17,9 @@ class Config {
             foreach ($array as $key=>$value) {
                 self::$params[$key] = $value;
             }
+            return true;
+        } else {
+            return false;
         }
     }
 
@@ -24,6 +27,9 @@ class Config {
     static public function removeParam($key) {
         if (isset(self::$params[$key])) {
             unset(self::$params[$key]);
+            return true;
+        } else {
+            return false;
         }
     }
 
@@ -36,6 +42,8 @@ class Config {
     static public function param($key) {
         if (isset(self::$params[$key])) {
             return self::$params[$key];
+        } else {
+            return false;
         }
     }
 }
